@@ -1,0 +1,416 @@
+/* ===== Cài đặt chung ===== */
+body {
+  background: linear-gradient(135deg, #0a0e1a 0%, #1a1a3a 100%);
+  font-family: 'Segoe UI', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+  min-height: 100vh;
+  overflow: hidden;
+  transition: all 0.5s ease-in-out;
+}
+
+/* ===== Layout các trang chính ===== */
+.profile-basic,
+.personal-info,
+.social-media,
+.project-page {
+  width: 100%;
+  max-width: 800px;
+  padding: 30px;
+  background-color: #082149;
+  color: #fff;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.16);
+  border-radius: 18px;
+  border: 5px solid #244eb8;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out, border 0.5s ease-in-out;
+}
+
+/* ===== Header trang cá nhân ===== */
+.profile-basic .header {
+  overflow: hidden;
+  position: relative;
+  gap: 24px;
+  margin-bottom: 20px;
+}
+
+.profile-basic img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #000;
+  transition: all 0.3s ease;
+  float: left;
+  margin-right: 10px;
+}
+.profile-basic img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgb(21, 158, 255);
+}
+
+.profile-basic .name {
+  font-size: 2.2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #04122a;
+  text-align: center;
+  transition: color 0.5s ease-in-out;
+}
+
+.profile-basic .major,
+.profile-basic .school {
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+  color: #555;
+  text-align: center;
+  transition: color 0.5s ease-in-out;
+}
+.Skill {
+text-align: left;
+}
+
+.skills-list {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  gap: 10px;
+}
+
+.skill-item {
+  background-color: #244eb8;
+  padding: 8px 16px;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+
+.skill-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(36, 78, 184, 0.4);
+  background-color: #0c3674;
+}
+/* ===== Trang Dự Án ===== */
+.project-page h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #04122a;
+  transition: color 0.5s ease-in-out;
+}
+.project-list {
+  width: 100%;
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.project-item {
+  background: #f7f7f7;
+  border-radius: 10px;
+  padding: 16px 18px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  text-align: left;
+  transition: all 0.3s ease;
+  border-left: 5px solid #f64f59;
+}
+.project-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+.project-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #04122a;
+  margin-bottom: 6px;
+  transition: color 0.5s ease-in-out;
+}
+.project-desc {
+  font-size: 1rem;
+  color: #444;
+  transition: color 0.5s ease-in-out;
+}
+.project-link {
+  color: #007bff;
+  text-decoration: none;
+  font-size: 0.9rem;
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+.project-link:hover {
+  color: #0056b3;
+}
+.project-link i {
+  margin-right: 5px;
+}
+
+/* ===== Thông tin cá nhân & mạng xã hội ===== */
+.personal-info ul,
+.social-media ul {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+}
+.personal-info li {
+  margin-bottom: 12px;
+  padding-bottom: 12px;
+  border-bottom: 1px dashed #eee;
+  transition: border-bottom 0.5s ease-in-out;
+}
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.social-link i {
+  font-size: 2.5em;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.light-mode .social-link i {
+  color: #222;
+}
+
+body:not(.light-mode) .social-link i {
+  color: #fff;
+}
+
+.social-link:hover i {
+  transform: translateY(-8px) scale(1.1);
+}
+
+.light-mode .social-link.facebook:hover i { color: #3b5998; }
+.light-mode .social-link.twitter:hover i { color: #1da1f2; }
+.light-mode .social-link.telegram:hover i { color: #0088cc; }
+.light-mode .social-link.github:hover i { color: #333; }
+.light-mode .social-link.instagram:hover i {
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+body:not(.light-mode) .social-link.facebook:hover i { color: #3b5998; }
+body:not(.light-mode) .social-link.twitter:hover i { color: #1da1f2; }
+body:not(.light-mode) .social-link.telegram:hover i { color: #0088cc; }
+body:not(.light-mode) .social-link.github:hover i { color: #333; }
+body:not(.light-mode) .social-link.instagram:hover i {
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+body:not(.light-mode) .social-links a[aria-label="Instagram"]:hover i {
+  color: #f58529 !important;
+}
+.back-to-top-btn {
+  margin: 32px auto 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #1877f3;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  font-size: 2rem;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(24,119,243,0.12);
+  transition: background 0.2s, transform 0.2s;
+  z-index: 10;
+}
+.back-to-top-btn:hover {
+  background: #0e5fd8;
+  transform: translateY(-4px) scale(1.08);
+}
+
+.cta-button {
+  background: linear-gradient(90deg, #f64f59, #c471ed);
+  padding: 12px 24px;
+  border-radius: 50px;
+  color: white;
+  font-weight: bold;
+  margin-top: 20px;
+  display: inline-block;
+  transition: all 0.3s;
+  text-decoration: none;
+  font-size: 1.1rem;
+  margin-left: 20px;
+}
+.cta-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+/* Các lớp .fade-in, .visible, .slide-up-out và @keyframes thường được sử dụng với JavaScript để tạo hiệu ứng chuyển động hoặc chuyển trang */
+.fade-in {
+  opacity: 0;
+  transform-style: preserve-3d;
+  transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, 100vh);
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.fade-in.visible {
+  transform: translate(-50%, -50%) rotateY(0deg);
+  opacity: 1;
+}
+.fade-in:not(.visible) {
+  transform: translate(-50%, -50%) rotateY(90deg);
+  opacity: 0;
+}
+.slide-up-out {
+  animation: slideUpOut s forwards;
+}
+@keyframes slideUpOut {
+  from { opacity: 1; transform: translate(-50%, -50%) rotateY(0deg);}
+  to { opacity: 0; transform: translate(-50%, -120%) rotateY(0deg);}
+}
+.slide-up-out-smooth {
+  animation: slideUpOutSmooth 0.8s forwards;
+}
+
+@keyframes slideUpOutSmooth {
+  from {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+  }
+  to {
+    transform: translate(-50%, -100%);
+    opacity: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .profile-basic .header { flex-direction: column; text-align: center;}
+  .profile-basic .name { font-size: 1.8rem;}
+  .profile-basic img { width: 120px; height: 120px;}
+}
+@media (max-width: 992px) {
+  .profile-basic .header { gap: 15px;}
+  .project-item { padding: 12px;}
+}
+
+@keyframes pulse {
+  0% { transform: scale(1);}
+  50% { transform: scale(1.1);}
+  100% { transform: scale(1);}
+}
+
+#particles-js {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  left: 0;
+  top: 0;
+}
+
+.light-mode .profile-basic,
+.light-mode .project-page,
+.light-mode .personal-info,
+.light-mode .social-media {
+  background: #c2d7df;
+  border: 5px solid #000000;
+  color: #222;
+}
+.light-mode .project-title,
+.light-mode .profile-basic .name,
+.light-mode .skills-title {
+  color: #222;
+}
+.light-mode .skill-item{
+  color: rgb(0, 0, 0);
+  background-color: #818181;
+}
+.light-mode .project-item {
+  background: #cecccc !important;
+  border-left: 5px solid #f64f59;
+}
+.light-mode .personal-info li {
+  border-bottom: 1px dashed #000000;
+}
+.light-mode .project-link {
+  color: #0056b3 !important;
+}
+
+body:not(.light-mode) .project-page,
+body:not(.light-mode) .personal-info,
+body:not(.light-mode) .social-media,
+body:not(.light-mode) .project-title,
+body:not(.light-mode) .profile-basic .name,
+body:not(.light-mode) .skill-item,
+body:not(.light-mode) .project-desc,
+body:not(.light-mode) .project-item,
+body:not(.light-mode) .cta-button,
+body:not(.light-mode) .back-to-top-btn,
+body:not(.light-mode) .project-page,
+body:not(.light-mode) .project-page *,
+body:not(.light-mode) .profile-basic,
+body:not(.light-mode) .profile-basic *,
+body:not(.light-mode) .personal-info,
+body:not(.light-mode) .personal-info *,
+body:not(.light-mode) .social-media  {
+  color: #fff !important;
+}
+body:not(.light-mode) .project-page h2,
+body:not(.light-mode) .project-page .project-title,
+body:not(.light-mode) .project-page .project-desc,
+body:not(.light-mode) .project-page .project-item {
+  color: #fff !important;
+}
+body:not(.light-mode) .project-item {
+  background: #0f3270 !important;
+  border-left: 5px solid #24add3;
+}
+body:not(.light-mode) .project-link {
+  color: #0099ff !important;
+}
+
+#theme-toggle, #lang-toggle {
+  width: 48px;
+  height: 48px;
+  font-size: 2rem;
+  border-radius: 50%;
+  border: none;
+  background: #fff;
+  color: #222;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, transform 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+  position: fixed;
+  right: 24px;
+  z-index: 100;
+}
+#theme-toggle {
+  top: 24px;
+  margin-bottom: 16px;
+}
+#lang-toggle {
+  top: 88px;
+  margin-top: 0;
+}
+#theme-toggle:hover, #lang-toggle:hover {
+  background: #70cbe0;
+  color: #fff;
+  transform: scale(1.08);
+}
