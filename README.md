@@ -46,6 +46,8 @@ Dự án này là một hồ sơ cá nhân (personal portfolio) được thiết
 ---
 
 ## 📂 Cấu trúc dự án
+
+```bash
 Root Folder/
 ├── Video - Picture/  # Thư mục chứa ảnh đại diện (và có thể video nền nếu bạn muốn thêm lại)
 │   └── Picture.jpg
@@ -55,6 +57,8 @@ Root Folder/
 ├── script.js         # Toàn bộ logic điều khiển giao diện tương tác và chuyển đổi ngôn ngữ
 ├── particles.json    # Cấu hình hiệu ứng hạt nền
 └── https://www.google.com/search?q=LICENSE           # Giấy phép bản quyền của dự án
+```
+
 ---
 
 ## 🔧 Cách triển khai
@@ -65,6 +69,7 @@ Root Folder/
 # Clone hoặc tải xuống các tệp vào một thư mục
 # Mở tệp index.html bằng trình duyệt web của bạn
 ```
+
 ### ✅ Cách 2: Triển khai lên Internet
 Bạn có thể sử dụng một trong các nền tảng hosting tĩnh sau:
 
