@@ -24,7 +24,7 @@ Tôi xây dựng portfolio này với mong muốn tạo ra một trải nghiệm
 
 ---
 
-## 🛠️ Công nghệ tôi làm chủ
+## 🛠️ Công nghệ sử dụng
 
 | Thành phần           | Mô tả                                                                                                                  |
 | :------------------- | :--------------------------------------------------------------------------------------------------------------------- |
@@ -36,7 +36,7 @@ Tôi xây dựng portfolio này với mong muốn tạo ra một trải nghiệm
 
 ---
 
-## 🔥 Điểm chạm đặc biệt
+## 🔥 Tính năng nổi bật
 
 * ✨ **Chuyển động 'Điện ảnh':** Trải nghiệm chuyển trang mượt mà như xem phim, với các hiệu ứng tinh tế khi cuộn hoặc dùng phím mũi tên.
 * 🌐 **"Ngôn ngữ của bạn":** Hỗ trợ song ngữ (🇻🇳 Tiếng Việt & 🇺🇸 English), chuyển đổi tức thì giúp mọi người dễ dàng tiếp cận.
@@ -66,18 +66,27 @@ Root Folder/
 ## 🚀 Mở khóa trải nghiệm
 
 ### ✅ Cách 1: Khám phá cục bộ
-Tải về: Kéo toàn bộ mã nguồn về máy tính của bạn.
 
-Mở: Click đúp vào tệp index.html và khám phá ngay trong trình duyệt của bạn!
+```bash
+# Tải về: Kéo toàn bộ mã nguồn về máy tính của bạn.
+
+# Mở: Click đúp vào tệp index.html và khám phá ngay trong trình duyệt của bạn!
+```
 
 ### ✅ Cách 2: Triển khai toàn cầu
 Muốn đưa hồ sơ của bạn lên mạng? Rất đơn giản!
 
 - GitHub Pages: Cách nhanh nhất để chia sẻ dự án trực tiếp từ kho GitHub của bạn.
+  
+- [GitHub Pages](https://pages.github.com/)
 
 - Netlify: Triển khai siêu tốc, tích hợp CI/CD và miễn phí HTTPS.
 
+- [Netlify](https://netlify.com/)
+
 - Vercel: Nền tảng tuyệt vời cho frontend, tối ưu hóa hiệu suất và trải nghiệm phát triển.
+
+- [Vercel](https://vercel.com/)
 
 ---
 
