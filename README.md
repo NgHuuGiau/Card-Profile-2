@@ -102,6 +102,8 @@ Tác giả: Nguyễn Hữu Giàu
 
 - Tôi đang nỗ lực hết mình để tối ưu hóa trải nghiệm trên các thiết bị di động. Mục tiêu là mang lại sự hoàn hảo trên mọi màn hình. Hãy chờ đón những bản cập nhật tiếp theo nhé!
 
+---
+
 ## ❗️ Lưu ý nhỏ:
 
 - Hiện tại giao diện web có thể sẽ bị lỗi đối với mobile
