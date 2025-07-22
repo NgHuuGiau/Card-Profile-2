@@ -10,7 +10,7 @@ Dự án này là một hồ sơ cá nhân (personal portfolio) được thiết
 
 ---
 
-![Demo](Video - Picture/Demo.png)
+![Demo](Video-Picture/Demo.png)
 
 ---
 
