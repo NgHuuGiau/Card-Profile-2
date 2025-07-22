@@ -1,4 +1,4 @@
-# 🚀 Nguyễn Hữu Giàu – Kiến tạo Trải nghiệm số
+# 🚀 Nguyễn Hữu Giàu – Trang WEB cá nhân
 
 > Nơi những ý tưởng mã hóa trở thành hiện thực sống động. Khám phá hành trình và các dự án đột phá của tôi!
 
