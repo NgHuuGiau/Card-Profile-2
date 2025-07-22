@@ -77,7 +77,9 @@ Muốn đưa hồ sơ của bạn lên mạng? Rất đơn giản!
 - Vercel: Nền tảng tuyệt vời cho frontend, tối ưu hóa hiệu suất và trải nghiệm phát triển.
 
 ## 🛡️ Giấy phép
-Dự án này được tạo ra như một hồ sơ cá nhân và phục vụ mục đích giới thiệu kỹ năng.
+Copyright (c) 2025 Nguyễn Hữu Giàu.
+
+Dự án này được cấp phép dưới Giấy phép MIT. Điều đó có nghĩa là bạn có thể tự do sử dụng, chỉnh sửa và phân phối. Hãy xem tệp LICENSE để biết thêm chi tiết! Nếu bạn có ý tưởng cải thiện hoặc muốn cộng tác, đừng ngần ngại liên hệ nhé!
 
 ---
 
@@ -97,4 +99,9 @@ Tác giả: Nguyễn Hữu Giàu
 ---
 
 ## 💡 Góc nhỏ chia sẻ:
+
 - Tôi đang nỗ lực hết mình để tối ưu hóa trải nghiệm trên các thiết bị di động. Mục tiêu là mang lại sự hoàn hảo trên mọi màn hình. Hãy chờ đón những bản cập nhật tiếp theo nhé!
+
+## ❗️ Lưu ý nhỏ:
+
+- Hiện tại giao diện web có thể sẽ bị lỗi đối với mobile
