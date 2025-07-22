@@ -61,9 +61,9 @@ Root Folder/
 └── LICENSE           # Giấy phép - để bạn biết tôi chia sẻ dự án này như thế nào
 ```
 
-## 🚀 Mở khóa trải nghiệm
-
 ---
+
+## 🚀 Mở khóa trải nghiệm
 
 ### ✅ Cách 1: Khám phá cục bộ
 Tải về: Kéo toàn bộ mã nguồn về máy tính của bạn.
