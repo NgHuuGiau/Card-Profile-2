@@ -64,7 +64,8 @@ Root Folder/
 ```bash
 # Clone hoặc tải xuống các tệp vào một thư mục
 # Mở tệp index.html bằng trình duyệt web của bạn
-✅ Cách 2: Triển khai lên Internet
+```
+### ✅ Cách 2: Triển khai lên Internet
 Bạn có thể sử dụng một trong các nền tảng hosting tĩnh sau:
 
 GitHub Pages
@@ -72,12 +73,12 @@ GitHub Pages
 Netlify
 
 Vercel
-```
-##🛡️ Bản Quyền
+
+## 🛡️ Bản Quyền
 Copyright (c) 2025 Nguyễn Hữu Giàu.
 
 Dự án này được cấp phép dưới Giấy phép MIT. Vui lòng xem tệp LICENSE để biết thêm chi tiết về các quyền và giới hạn.
-##📬 Liên hệ
+## 📬 Liên hệ
 Tác giả: Nguyễn Hữu Giàu
 
 Email: HuuGiau2304@gmail.com
@@ -89,5 +90,5 @@ Facebook: HuuGiau.2304
 Instagram: nguyen_huugiau
 
 X (Twitter): Nguyen_Huu_Giau
-##❗️ Lưu ý:
+## ❗️ Lưu ý:
 Hiện tại, giao diện web có thể chưa hoàn toàn tối ưu cho thiết bị di động (mobile). Tôi đang tiếp tục cải thiện khả năng responsive cho dự án.
