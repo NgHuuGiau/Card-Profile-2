@@ -26,13 +26,13 @@ Tôi xây dựng portfolio này với mong muốn tạo ra một trải nghiệm
 
 ## 🛠️ Công nghệ sử dụng
 
-| Thành phần           | Mô tả                                                                                                                  |
-| :------------------- | :--------------------------------------------------------------------------------------------------------------------- |
-| `HTML5`              | Xây dựng **cấu trúc nền tảng vững chắc** cho mọi dự án web, đảm bảo tính tương thích và SEO.                            |
+| Thành phần | Mô tả |
+| :--------- | :------------------- |
+| `HTML5`              | Cấu trúc nội dung trang web. |
 | `CSS3`               | Thiết kế **giao diện bắt mắt, phản hồi nhanh** trên mọi thiết bị, cùng các hiệu ứng động mượt mà, nâng cao trải nghiệm người dùng. |
 | `Vanilla JavaScript` | **Thổi hồn tương tác** vào trang web: từ logic phức tạp đến các hiệu ứng nhỏ, mọi thứ đều được điều khiển mượt mà và hiệu quả. |
-| `Particles.js`       | Tạo điểm nhấn **thị giác độc đáo** với hiệu ứng hạt nền động, mang lại cảm giác hiện đại và cuốn hút.                   |
-| `Font Awesome`       | Tích hợp **biểu tượng chuyên nghiệp**, giúp giao diện thân thiện, dễ hiểu và đẹp mắt hơn.                              |
+| `Particles.js`       | Tạo điểm nhấn **thị giác độc đáo** với hiệu ứng hạt nền động, mang lại cảm giác hiện đại và cuốn hút. |
+| `Font Awesome`       | Tích hợp **biểu tượng chuyên nghiệp**, giúp giao diện thân thiện, dễ hiểu và đẹp mắt hơn. |
 
 ---
 
@@ -102,13 +102,13 @@ Tác giả: Nguyễn Hữu Giàu
 
 -**Email**: HuuGiau2304@gmail.com
 
--**GitHub**: NgHuuGiau
+-**GitHub**: [NgHuuGiau](https://github.com/NgHuuGiau)
 
--**Facebook**: HuuGiau.2304
+-**Facebook**: [HuuGiau.2304](https://www.facebook.com/HuuGiau.2304)
 
--**Instagram**: nguyen_huugiau
+-**Instagram**: [**nguyen_huugiau**](https://www.instagram.com/nguyen_huugiau/)
 
--**X (Twitter)**: Nguyen_Huu_Giau
+-**X (Twitter)**: [Nguyen_Huu_Giau](https://x.com/Nguyen_Huu_Giau)
 
 ---
 
