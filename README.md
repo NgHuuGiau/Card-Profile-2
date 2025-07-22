@@ -76,17 +76,11 @@ Root Folder/
 ### ✅ Cách 2: Triển khai toàn cầu
 Muốn đưa hồ sơ của bạn lên mạng? Rất đơn giản!
 
-- GitHub Pages: Cách nhanh nhất để chia sẻ dự án trực tiếp từ kho GitHub của bạn.
-  
-- [GitHub Pages](https://pages.github.com/)
+- [GitHub Pages](https://pages.github.com/): Cách nhanh nhất để chia sẻ dự án trực tiếp từ kho GitHub của bạn.
 
-- Netlify: Triển khai siêu tốc, tích hợp CI/CD và miễn phí HTTPS.
+- [Netlify](https://netlify.com/): Triển khai siêu tốc, tích hợp CI/CD và miễn phí HTTPS.
 
-- [Netlify](https://netlify.com/)
-
-- Vercel: Nền tảng tuyệt vời cho frontend, tối ưu hóa hiệu suất và trải nghiệm phát triển.
-
-- [Vercel](https://vercel.com/)
+- [Vercel](https://vercel.com/): Nền tảng tuyệt vời cho frontend, tối ưu hóa hiệu suất và trải nghiệm phát triển.
 
 ---
 
