@@ -4,7 +4,7 @@
 
 ---
 
-## ✨ Chào bạn, tôi là Giàu!
+## ✨ Chào mừng đến với không gian làm việc của tôi!
 
 Chào mừng bạn đến với không gian số của tôi! Đây không chỉ là một **hồ sơ cá nhân (personal portfolio)** mà còn là cánh cửa để bạn khám phá **hành trình của một lập trình viên đầy đam mê**. Với giao diện được thiết kế tối giản nhưng mạnh mẽ, trang web này là nơi tôi chia sẻ những dự án tâm huyết, quá trình học hỏi không ngừng và những kỹ năng tôi đã tích lũy được.
 
