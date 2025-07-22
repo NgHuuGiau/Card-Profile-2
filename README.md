@@ -62,6 +62,9 @@ Root Folder/
 ```
 
 ## 🚀 Mở khóa trải nghiệm
+
+---
+
 ### ✅ Cách 1: Khám phá cục bộ
 Tải về: Kéo toàn bộ mã nguồn về máy tính của bạn.
 
@@ -75,6 +78,8 @@ Muốn đưa hồ sơ của bạn lên mạng? Rất đơn giản!
 - Netlify: Triển khai siêu tốc, tích hợp CI/CD và miễn phí HTTPS.
 
 - Vercel: Nền tảng tuyệt vời cho frontend, tối ưu hóa hiệu suất và trải nghiệm phát triển.
+
+---
 
 ## 🛡️ Giấy phép
 Copyright (c) 2025 Nguyễn Hữu Giàu.
