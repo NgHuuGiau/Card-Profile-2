@@ -25,14 +25,15 @@ document.addEventListener("DOMContentLoaded", () => {
       statFocusValue: "UI + Logic",
       statFocusLabel: "Tập trung vào trải nghiệm và thuật toán",
       projectsTitle: "Dự án tiêu biểu",
-      projectsSubtitle:
-        "Hai dự án thể hiện khả năng lập trình, trình bày thông tin và tổ chức trải nghiệm.",
+      projectsSubtitle: "Các dự án thể hiện khả năng lập trình, giải quyết vấn đề và tổ chức trải nghiệm người dùng.",
       project1Title: "Sudoku Game",
-      project1Desc:
-        "Dự án Sudoku được phát triển bằng Python, kết hợp Pygame cho giao diện và Tkinter cho menu. Trọng tâm của dự án là bài toán tạo bảng ngẫu nhiên nhưng vẫn giải được bằng backtracking, đồng thời giúp người chơi kiểm tra nước đi và theo dõi tiến độ.",
-      project2Title: "Website Cá Nhân",
-      project2Desc:
-        "Website profile tập trung vào cách trình bày thông tin rõ ràng, nhận diện cá nhân rõ nét và điều hướng để người xem dễ theo dõi. Mục tiêu là tạo ấn tượng nhanh với nhà tuyển dụng và cho thấy khả năng kết hợp giao diện với nội dung.",
+      project1Desc: "Game Sudoku bằng Python (Pygame, Tkinter) với thuật toán sinh bảng ngẫu nhiên bằng backtracking.",
+      project2Title: "SummarEase Django",
+      project2Desc: "Ứng dụng web Django giúp tự động tóm tắt văn bản dài thành thông tin ngắn gọn, súc tích.",
+      project3Title: "Fashion Website",
+      project3Desc: "Trang thương mại điện tử mảng thời trang với đầy đủ tính năng giỏ hàng, thanh toán và quản lý kho.",
+      project4Title: "Card Profile",
+      project4Desc: "Trang hồ sơ cá nhân với thiết kế hiện đại, tối ưu trải nghiệm UX/UI và hiệu ứng mượt mà.",
       viewSource: "Xem mã nguồn",
       contactTitle: "Thông tin liên hệ",
       contactSubtitle: "Sẵn sàng kết nối cho cơ hội thực tập, cộng tác dự án và trao đổi kỹ thuật.",
@@ -44,7 +45,11 @@ document.addEventListener("DOMContentLoaded", () => {
       socialTitle: "Kết nối với tôi",
       socialSubtitle: "Theo dõi để cập nhật dự án, quá trình học tập và những thử nghiệm mới.",
       backTopText: "Quay lại giới thiệu",
-      scrollHint: "Cuộn hoặc dùng phím mũi tên để xem tiếp"
+      scrollHint: "Cuộn hoặc dùng phím mũi tên để xem tiếp",
+      navIntro: "Giới thiệu",
+      navProjects: "Dự án tiêu biểu",
+      navContact: "Thông tin liên hệ",
+      navSocial: "Kết nối với tôi"
     },
     en: {
       brandKicker: "Personal Portfolio",
@@ -63,14 +68,15 @@ document.addEventListener("DOMContentLoaded", () => {
       statFocusValue: "UI + Logic",
       statFocusLabel: "Focused on experience and algorithms",
       projectsTitle: "Featured projects",
-      projectsSubtitle:
-        "Two projects that highlight programming ability, visual presentation, and structured user flow.",
+      projectsSubtitle: "A selection of projects that highlight my programming ability, problem-solving skills, and structured user flow.",
       project1Title: "Sudoku Game",
-      project1Desc:
-        "The Sudoku project was built in Python with Pygame for the gameplay screen and Tkinter for the menu. Its core challenge was generating random but solvable boards with backtracking, while still giving players validation, guidance, and a clean play flow.",
-      project2Title: "Personal Portfolio Website",
-      project2Desc:
-        "This portfolio site focuses on clear storytelling, stronger personal branding, and section navigation that keeps visitors engaged. The goal is to leave a sharper first impression and show how interface decisions support the content.",
+      project1Desc: "A Python Sudoku game (Pygame, Tkinter) featuring a backtracking algorithm for random board generation.",
+      project2Title: "SummarEase Django",
+      project2Desc: "A Django web app that instantly summarizes long-form text into concise and easily digestible content.",
+      project3Title: "Fashion Website",
+      project3Desc: "A fashion e-commerce website with a complete shopping cart, inventory management, and online payments.",
+      project4Title: "Card Profile",
+      project4Desc: "A modern personal portfolio designed with optimized UX/UI, clean architecture, and smooth animations.",
       viewSource: "View source code",
       contactTitle: "Contact information",
       contactSubtitle: "Open to internship opportunities, project collaboration, and technical discussion.",
@@ -82,7 +88,11 @@ document.addEventListener("DOMContentLoaded", () => {
       socialTitle: "Connect with me",
       socialSubtitle: "Follow for project updates, learning progress, and new experiments.",
       backTopText: "Back to intro",
-      scrollHint: "Scroll or use arrow keys to continue"
+      scrollHint: "Scroll or use arrow keys to continue",
+      navIntro: "Introduction",
+      navProjects: "Featured projects",
+      navContact: "Contact info",
+      navSocial: "Connect with me"
     }
   };
 

@@ -44,10 +44,22 @@
     <div class="slide-progress" aria-hidden="true">
       <span class="progress-line"></span>
       <div class="progress-dots">
-        <button class="progress-dot active" data-slide-target="0" aria-label="Mở thông tin cá nhân"></button>
-        <button class="progress-dot" data-slide-target="1" aria-label="Mở dự án"></button>
-        <button class="progress-dot" data-slide-target="2" aria-label="Mở liên hệ"></button>
-        <button class="progress-dot" data-slide-target="3" aria-label="Mở mạng xã hội"></button>
+        <div class="dot-container">
+          <button class="progress-dot active" data-slide-target="0" aria-label="Mở thông tin cá nhân"></button>
+          <span class="dot-label" data-i18n="navIntro">Giới thiệu</span>
+        </div>
+        <div class="dot-container">
+          <button class="progress-dot" data-slide-target="1" aria-label="Mở dự án"></button>
+          <span class="dot-label" data-i18n="navProjects">Dự án tiêu biểu</span>
+        </div>
+        <div class="dot-container">
+          <button class="progress-dot" data-slide-target="2" aria-label="Mở liên hệ"></button>
+          <span class="dot-label" data-i18n="navContact">Thông tin liên hệ</span>
+        </div>
+        <div class="dot-container">
+          <button class="progress-dot" data-slide-target="3" aria-label="Mở mạng xã hội"></button>
+          <span class="dot-label" data-i18n="navSocial">Kết nối với tôi</span>
+        </div>
       </div>
     </div>
 
@@ -127,18 +139,55 @@
                 <span class="project-year">2026</span>
               </div>
               <h3 class="project-title" data-i18n="project1Title">Sudoku Game</h3>
-              <p
-                class="project-desc"
-                data-i18n="project1Desc"
-              >
-                Dự án Sudoku được phát triển bằng Python, kết hợp Pygame cho giao diện và Tkinter cho menu. Trọng tâm của dự án là bài toán tạo bảng ngẫu nhiên nhưng vẫn giải được bằng backtracking, đồng thời giúp người chơi kiểm tra nước đi và theo dõi tiến độ.
+              <p class="project-desc" data-i18n="project1Desc">
+                Game Sudoku bằng Python (Pygame, Tkinter) với thuật toán sinh bảng ngẫu nhiên bằng backtracking.
               </p>
               <div class="project-tags">
                 <span>Backtracking</span>
                 <span>Pygame</span>
-                <span>Game Logic</span>
+                <span>Tkinter</span>
               </div>
-              <a href="https://github.com/Huugiauuu/sudoku" target="_blank" class="project-link" rel="noreferrer">
+              <a href="https://github.com/NgHuuGiau/SUDOKU" target="_blank" class="project-link" rel="noreferrer">
+                <i class="fab fa-github"></i>
+                <span data-i18n="viewSource">Xem mã nguồn</span>
+              </a>
+            </article>
+
+            <article class="project-item tilt-card">
+              <div class="project-topline">
+                <span class="project-badge">Django</span>
+                <span class="project-year">2026</span>
+              </div>
+              <h3 class="project-title" data-i18n="project2Title">SummarEase Django</h3>
+              <p class="project-desc" data-i18n="project2Desc">
+                Ứng dụng web Django giúp tự động tóm tắt văn bản dài thành thông tin ngắn gọn, súc tích.
+              </p>
+              <div class="project-tags">
+                <span>Python</span>
+                <span>Django</span>
+                <span>NLP</span>
+              </div>
+              <a href="https://github.com/NgHuuGiau/SummarEase-Django" target="_blank" class="project-link" rel="noreferrer">
+                <i class="fab fa-github"></i>
+                <span data-i18n="viewSource">Xem mã nguồn</span>
+              </a>
+            </article>
+
+            <article class="project-item tilt-card">
+              <div class="project-topline">
+                <span class="project-badge">Fullstack</span>
+                <span class="project-year">2026</span>
+              </div>
+              <h3 class="project-title" data-i18n="project3Title">Fashion Website</h3>
+              <p class="project-desc" data-i18n="project3Desc">
+                Trang thương mại điện tử mảng thời trang với đầy đủ tính năng giỏ hàng, thanh toán và quản lý kho.
+              </p>
+              <div class="project-tags">
+                <span>Web Dev</span>
+                <span>E-commerce</span>
+                <span>Database</span>
+              </div>
+              <a href="https://github.com/NgHuuGiau/Fashion-Website" target="_blank" class="project-link" rel="noreferrer">
                 <i class="fab fa-github"></i>
                 <span data-i18n="viewSource">Xem mã nguồn</span>
               </a>
@@ -149,19 +198,16 @@
                 <span class="project-badge">Frontend</span>
                 <span class="project-year">2026</span>
               </div>
-              <h3 class="project-title" data-i18n="project2Title">Website Cá Nhân</h3>
-              <p
-                class="project-desc"
-                data-i18n="project2Desc"
-              >
-                Website profile tập trung vào cách trình bày thông tin rõ ràng, nhận diện cá nhân rõ nét và điều hướng để người xem dễ theo dõi. Mục tiêu là tạo ấn tượng nhanh với nhà tuyển dụng và cho thấy khả năng kết hợp giao diện với nội dung.
+              <h3 class="project-title" data-i18n="project4Title">Card Profile</h3>
+              <p class="project-desc" data-i18n="project4Desc">
+                Trang hồ sơ cá nhân với thiết kế hiện đại, tối ưu trải nghiệm UX/UI và hiệu ứng mượt mà.
               </p>
               <div class="project-tags">
-                <span>HTML</span>
-                <span>CSS</span>
+                <span>HTML/CSS</span>
                 <span>JavaScript</span>
+                <span>UI/UX</span>
               </div>
-              <a href="https://github.com/Huugiauuu/personal-portfolio" target="_blank" class="project-link" rel="noreferrer">
+              <a href="https://github.com/NgHuuGiau/Card-Profile-2" target="_blank" class="project-link" rel="noreferrer">
                 <i class="fab fa-github"></i>
                 <span data-i18n="viewSource">Xem mã nguồn</span>
               </a>
