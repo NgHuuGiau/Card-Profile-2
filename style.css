@@ -36,7 +36,7 @@ body.light-mode {
   --chip-border: rgba(0, 150, 199, 0.15);
   --button-bg: rgba(255, 255, 255, 0.9);
   --button-hover: #ffffff;
-  --line: rgba(0, 150, 199, 0.15);
+  --line: rgba(0, 150, 199, 0.3);
   --card-highlight: linear-gradient(135deg, rgba(0, 150, 199, 0.12), rgba(0, 180, 216, 0.12));
   --glow-1: rgba(0, 180, 216, 0.15);
   --glow-2: rgba(0, 150, 199, 0.15);
@@ -911,11 +911,20 @@ body.light-mode .social-card .back-to-top-btn:hover {
   transition: transform 0.25s ease, background 0.25s ease, box-shadow 0.25s ease;
 }
 
+body.light-mode .progress-dot {
+  background: rgba(0, 48, 73, 0.15);
+}
+
 .progress-dot.active {
   background: var(--accent);
   transform: scale(1.2);
   box-shadow: 0 0 0 8px rgba(110, 231, 255, 0.12);
 }
+
+body.light-mode .progress-dot.active {
+  box-shadow: 0 0 0 8px rgba(0, 150, 199, 0.15);
+}
+
 
 .scroll-hint {
   position: fixed;
