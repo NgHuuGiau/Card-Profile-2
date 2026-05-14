@@ -130,6 +130,20 @@ document.addEventListener("DOMContentLoaded", () => {
       return;
     }
 
+    // Kiểm tra nếu đang cuộn trên .scrollable-panel thì ưu tiên cuộn nội dung bên trong
+    const scrollable = event.target.closest(".scrollable-panel");
+    if (scrollable) {
+      const direction = event.deltaY > 0 ? 1 : -1;
+      const atTop = scrollable.scrollTop === 0;
+      const atBottom = Math.abs(scrollable.scrollHeight - scrollable.clientHeight - scrollable.scrollTop) < 2;
+
+      // Nếu cuộn xuống mà chưa tới cuối, hoặc cuộn lên mà chưa tới đầu → cuộn nội dung card
+      if ((direction === 1 && !atBottom) || (direction === -1 && !atTop)) {
+        // Để browser tự cuộn nội dung (không preventDefault)
+        return;
+      }
+    }
+
     event.preventDefault();
     const direction = event.deltaY > 0 ? 1 : -1;
     const nextSlide = clampIndex(currentSlide + direction);
