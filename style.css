@@ -519,6 +519,8 @@ body.light-mode .panel-card::before {
 .contact-card {
   border-radius: 22px;
   padding: 16px 18px;
+  display: flex;
+  flex-direction: column;
 }
 
 .project-item::before,
@@ -586,10 +588,28 @@ body.light-mode .panel-card::before {
 }
 
 .project-link {
-  margin-top: 12px;
+  margin-top: 20px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 5px 0; /* Thêm vùng đệm để dễ click hơn */
   color: var(--accent);
   font-weight: 700;
-  font-size: 0.9rem;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  width: fit-content;
+  position: relative;
+  z-index: 10;
+  pointer-events: auto; /* Đảm bảo nhận sự kiện click */
+}
+
+.project-link:hover {
+  color: var(--accent-3);
+  transform: translateX(5px);
+}
+
+.project-link i {
+  font-size: 1.2rem;
 }
 
 
@@ -601,14 +621,25 @@ body.light-mode .panel-card::before {
 }
 
 .contact-grid {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 }
 
 .contact-card {
   display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+  min-height: 120px;
+}
+
+.contact-details {
+  display: flex;
   flex-direction: column;
-  gap: 12px;
-  min-height: 208px;
+  gap: 4px;
+}
+
+.contact-label {
+  margin-bottom: 0;
 }
 
 .contact-icon {
