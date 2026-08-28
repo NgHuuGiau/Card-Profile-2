@@ -6,6 +6,25 @@ document.addEventListener("DOMContentLoaded", () => {
   const langToggle = document.getElementById("lang-toggle");
   const backBtn = document.getElementById("backToFirstPage");
   const mobileBreakpoint = window.matchMedia("(max-width: 900px)");
+  const preloader = document.getElementById("preloader");
+  const percentEl = document.getElementById("load-percentage");
+  const barEl = document.querySelector(".preloader-bar");
+  const finePointer = window.matchMedia("(hover: hover) and (pointer: fine)");
+
+  const revealSelectors = [
+    ".eyebrow",
+    ".hero-name",
+    ".hero-summary",
+    ".meta-chip",
+    ".avatar-frame",
+    ".skill-block",
+    ".section-head",
+    ".project-item",
+    ".contact-card",
+    ".cta-button",
+    ".social-link-card",
+    ".back-to-top-btn"
+  ];
 
   const translations = {
     vi: {
@@ -100,6 +119,126 @@ document.addEventListener("DOMContentLoaded", () => {
   let wheelLocked = false;
   let currentLang = "vi";
 
+  function prepareRevealItems() {
+    slides.forEach((slide) => {
+      let order = 0;
+      slide.querySelectorAll(revealSelectors.join(",")).forEach((item) => {
+        item.classList.add("reveal-item");
+        item.style.setProperty("--reveal-order", order);
+        order += 1;
+      });
+    });
+  }
+
+  function setupCursorGlow() {
+    if (!finePointer.matches) return;
+
+    const glow = document.createElement("div");
+    glow.className = "cursor-glow";
+    glow.setAttribute("aria-hidden", "true");
+    document.body.appendChild(glow);
+
+    window.addEventListener("pointermove", (event) => {
+      document.body.classList.add("has-pointer");
+      document.documentElement.style.setProperty("--cursor-x", event.clientX + "px");
+      document.documentElement.style.setProperty("--cursor-y", event.clientY + "px");
+    });
+  }
+
+  /* ══════════════════════════════════════
+     PRELOADER
+  ══════════════════════════════════════ */
+  function runPreloader() {
+    if (!preloader || !percentEl || !barEl) {
+      document.body.classList.add("is-ready");
+      return;
+    }
+
+    let pct = 0;
+    // Fast at start, slow in middle, fast at end
+    const speeds = [
+      { target: 30, ms: 18 },
+      { target: 70, ms: 28 },
+      { target: 92, ms: 14 },
+      { target: 100, ms: 8 }
+    ];
+
+    let speedIdx = 0;
+
+    function tick() {
+      pct += 1;
+      percentEl.textContent = pct;
+      barEl.style.width = pct + "%";
+
+      if (pct >= 100) {
+        dismissPreloader();
+        return;
+      }
+
+      // Pick speed based on current percentage
+      while (speedIdx < speeds.length - 1 && pct >= speeds[speedIdx].target) {
+        speedIdx++;
+      }
+      setTimeout(tick, speeds[speedIdx].ms);
+    }
+
+    setTimeout(tick, 120);
+  }
+
+  function dismissPreloader() {
+    if (!preloader) return;
+    // Short pause at 100% before hiding
+    setTimeout(() => {
+      document.body.classList.add("is-ready");
+      preloader.classList.add("hidden");
+      // Remove from DOM after transition
+      preloader.addEventListener("transitionend", () => {
+        preloader.remove();
+      }, { once: true });
+    }, 400);
+  }
+
+  runPreloader();
+
+  /* ══════════════════════════════════════
+     PARTICLE COLOR SYNC
+  ══════════════════════════════════════ */
+  function updateParticleColors(isLight) {
+    const canvas = document.querySelector("#particles-js canvas");
+    if (!canvas) return;
+
+    // Attempt to re-initialise particles.js with new colour config
+    const config = isLight
+      ? {
+          color: "#2563eb",
+          lineColor: "#2563eb",
+          lineOpacity: 0.15,
+          opacity: 0.25
+        }
+      : {
+          color: "#0ea5e9",
+          lineColor: "#0ea5e9",
+          lineOpacity: 0.2,
+          opacity: 0.22
+        };
+
+    if (window.pJSDom && window.pJSDom.length > 0) {
+      try {
+        const pJS = window.pJSDom[0].pJS;
+        pJS.particles.color.value = config.color;
+        pJS.particles.line_linked.color = config.lineColor;
+        pJS.particles.line_linked.opacity = config.lineOpacity;
+        pJS.particles.opacity.value = config.opacity;
+        pJS.fn.particlesRefresh();
+      } catch (e) {
+        // Silently fail if particles.js API is unavailable
+      }
+    }
+  }
+
+  /* ══════════════════════════════════════
+     SLIDE NAVIGATION
+  ══════════════════════════════════════ */
   function clampIndex(index) {
     return Math.max(0, Math.min(index, slides.length - 1));
   }
@@ -111,7 +250,12 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function showSlide(index) {
-    currentSlide = clampIndex(index);
+    const next = clampIndex(index);
+    const stage = document.querySelector(".slides-stage");
+    if (stage) {
+      stage.dataset.dir = next > currentSlide ? "1" : next < currentSlide ? "-1" : stage.dataset.dir || "1";
+    }
+    currentSlide = next;
     slides.forEach((slide, slideIndex) => {
       slide.classList.toggle("is-visible", slideIndex === currentSlide || mobileBreakpoint.matches);
     });
@@ -139,7 +283,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
       // Nếu cuộn xuống mà chưa tới cuối, hoặc cuộn lên mà chưa tới đầu → cuộn nội dung card
       if ((direction === 1 && !atBottom) || (direction === -1 && !atTop)) {
-        // Để browser tự cuộn nội dung (không preventDefault)
         return;
       }
     }
@@ -181,12 +324,18 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
+  /* ══════════════════════════════════════
+     THEME TOGGLE
+  ══════════════════════════════════════ */
   function applyThemeIcon() {
     themeToggle.innerHTML = document.body.classList.contains("light-mode")
       ? '<i class="fas fa-sun"></i>'
       : '<i class="fas fa-moon"></i>';
   }
 
+  /* ══════════════════════════════════════
+     I18N
+  ══════════════════════════════════════ */
   function updateLanguage(lang) {
     currentLang = lang;
     document.documentElement.lang = lang === "vi" ? "vi" : "en";
@@ -199,6 +348,9 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  /* ══════════════════════════════════════
+     3D TILT
+  ══════════════════════════════════════ */
   function setTilt(event, card) {
     if (mobileBreakpoint.matches) {
       return;
@@ -217,6 +369,9 @@ document.addEventListener("DOMContentLoaded", () => {
     card.style.transform = "";
   }
 
+  /* ══════════════════════════════════════
+     EVENT LISTENERS
+  ══════════════════════════════════════ */
   window.addEventListener("wheel", handleWheel, { passive: false });
   window.addEventListener("keydown", handleKeydown);
 
@@ -235,6 +390,7 @@ document.addEventListener("DOMContentLoaded", () => {
     themeToggle.addEventListener("click", () => {
       document.body.classList.toggle("light-mode");
       applyThemeIcon();
+      updateParticleColors(document.body.classList.contains("light-mode"));
     });
   }
 
@@ -260,5 +416,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   applyThemeIcon();
   updateLanguage(currentLang);
+  prepareRevealItems();
+  setupCursorGlow();
   showSlide(0);
 });
