@@ -40,18 +40,18 @@ Tại đây, bạn sẽ tìm thấy sự kết hợp giữa kỹ thuật phần 
 
 ## 📂 Dự án tiêu biểu (Featured Projects)
 
-*   **[YOLO12 AI Vision System](https://github.com/NgHuuGiau/Project-Yolo-v12)**: 
-    *   *AI / Python*
-    *   Hệ thống nhận dạng đối tượng và phân tích cử chỉ tay thời gian thực, tối ưu hóa cho GPU NVIDIA.
-*   **[SummarEase Django](https://github.com/NgHuuGiau/SummarEase-Django)**: 
-    *   *Django / NLP / Python*
-    *   Giải pháp thông minh giúp 'gạn đục khơi trong', trích xuất những tinh túy từ các văn bản dài.
-*   **[Sudoku Game](https://github.com/NgHuuGiau/SUDOKU)**: 
-    *   *Python / Algorithms*
-    *   Trải nghiệm giải đố mượt mà dựa trên thuật toán Backtracking với giao diện trực quan.
-*   **[Fashion Website](https://github.com/NgHuuGiau/Fashion-Website)**: 
-    *   *Fullstack / Web Dev*
-    *   Nền tảng thương mại điện tử mảng thời trang với kiến trúc hoàn chỉnh từ Frontend đến Backend.
+*   **[OncoVision](https://github.com/NgHuuGiau/OncoVision)**:
+    *   *AI / Medical*
+    *   Nền tảng hỗ trợ chẩn đoán hình ảnh y khoa: phân tích 7 nhóm ung thư, chat AI cho bác sĩ và pipeline huấn luyện mô hình YOLO/CNN ngay trên máy local.
+*   **[Fashion Website](https://github.com/NgHuuGiau/Fashion-Website)**:
+    *   *Fullstack / Django + Vanilla JS*
+    *   Hệ thống thương mại điện tử thời trang với Django + Vanilla JS, tích hợp CI/CD, Docker và chuẩn hoá chất lượng mã nguồn.
+*   **[SummarEase Django](https://github.com/NgHuuGiau/SummarEase-Django)**:
+    *   *Django / AI / Python*
+    *   Công cụ tóm tắt văn bản thông minh: trích xuất tinh tuý từ văn bản, URL và file (PDF/DOCX/EPUB) bằng TextRank và Gemini AI.
+*   **[YOLO Real-Time Vision](https://github.com/NgHuuGiau/Yolo11)**:
+    *   *AI / Vision / Python*
+    *   Hệ thống nhận diện vật thể và cử chỉ bàn tay theo thời gian thực với YOLO11 + MediaPipe, tăng tốc TensorRT và web UI trực tiếp.
 
 ---
 
