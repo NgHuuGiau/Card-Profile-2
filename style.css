@@ -1,5 +1,4 @@
 :root {
-  /* ─── Dark Mode: Black & Deep Blue + Neon Glow ─── */
   --bg-start: #030712;
   --bg-end: #0b1528;
   --panel-bg: rgba(3, 10, 22, 0.82);
@@ -23,7 +22,6 @@
 }
 
 body.light-mode {
-  /* ─── Light Mode: White, Black & Royal Blue ─── */
   --bg-start: #f8fafc;
   --bg-end: #eff6ff;
   --panel-bg: rgba(255, 255, 255, 0.94);
@@ -141,9 +139,6 @@ body.has-pointer .cursor-glow {
   opacity: 1;
 }
 
-/* ══════════════════════════════════════════
-   PRELOADER / OPENING INTRO
-══════════════════════════════════════════ */
 .preloader {
   position: fixed;
   inset: 0;
@@ -306,7 +301,6 @@ body.has-pointer .cursor-glow {
   margin-top: 4px;
 }
 
-/* ── Neon accent border on hud ── */
 .hud::after {
   content: "";
   position: absolute;
@@ -418,30 +412,34 @@ body.is-ready .page-shell {
 
 .fade-panel {
   opacity: 0;
-  transform: translateY(80px) scale(0.93);
-  filter: blur(16px);
+  transform: translateY(60px) scale(0.95);
+  filter: blur(14px);
+  clip-path: inset(0 0 18% 0);
   transition:
     opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
     transform 0.7s cubic-bezier(0.16, 1, 0.3, 1),
-    filter 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+    filter 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+    clip-path 0.7s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .fade-panel.is-visible {
   opacity: 1;
   transform: translateY(0) scale(1);
   filter: blur(0);
+  clip-path: inset(0 0 0 0);
   pointer-events: auto;
 }
 
-/* Directional slide: di chuyển lên / xuống theo hướng cuộn */
 .slides-stage[data-dir="-1"] .fade-panel:not(.is-visible) {
-  transform: translateY(-80px) scale(0.93);
+  transform: translateY(-60px) scale(0.95);
   filter: blur(14px);
+  clip-path: inset(18% 0 0 0);
 }
 
 .slides-stage[data-dir="1"] .fade-panel:not(.is-visible) {
-  transform: translateY(80px) scale(0.93);
+  transform: translateY(60px) scale(0.95);
   filter: blur(14px);
+  clip-path: inset(0 0 18% 0);
 }
 
 .panel-card {
@@ -459,47 +457,6 @@ body.is-ready .page-shell {
     inset 0 -1px 0 rgba(37, 99, 235, 0.08);
   padding: 34px;
   position: relative;
-  overflow: hidden;
-}
-
-.panel-card::after {
-  content: "";
-  position: absolute;
-  inset: -1px;
-  background: linear-gradient(115deg, transparent 0 34%, rgba(0, 240, 255, 0.22) 45%, rgba(255, 255, 255, 0.09) 50%, transparent 62%);
-  transform: translateX(-120%);
-  opacity: 0;
-  pointer-events: none;
-}
-
-.fade-panel .panel-card {
-  transition: border-color 0.6s ease, box-shadow 0.6s ease;
-}
-
-.fade-panel.is-visible .panel-card {
-  border-color: rgba(0, 240, 255, 0.45);
-  box-shadow:
-    0 32px 100px rgba(0, 5, 20, 0.65),
-    0 0 0 1px rgba(0, 240, 255, 0.12),
-    0 0 44px rgba(0, 240, 255, 0.18),
-    inset 0 1px 0 rgba(14, 165, 233, 0.12),
-    inset 0 -1px 0 rgba(37, 99, 235, 0.08);
-  animation: panel-glow 3.2s ease-in-out infinite alternate;
-}
-
-@keyframes panel-glow {
-  0%   { box-shadow: 0 32px 100px rgba(0, 5, 20, 0.65), 0 0 0 1px rgba(0, 240, 255, 0.1), 0 0 30px rgba(0, 240, 255, 0.12); }
-  100% { box-shadow: 0 32px 100px rgba(0, 5, 20, 0.65), 0 0 0 1px rgba(0, 240, 255, 0.18), 0 0 56px rgba(0, 240, 255, 0.24); }
-}
-
-.fade-panel.is-visible .panel-card::after {
-  animation: card-sweep 1.1s ease 0.25s both;
-}
-
-@keyframes card-sweep {
-  0%   { transform: translateX(-120%); opacity: 0; }
-  28%  { opacity: 1; }
-  100% { transform: translateX(120%); opacity: 0; }
 }
 
 body.light-mode .panel-card {
@@ -516,7 +473,6 @@ body.light-mode .fade-panel.is-visible .panel-card {
   box-shadow: var(--panel-shadow), 0 0 0 1px rgba(37, 99, 235, 0.1), 0 0 30px rgba(37, 99, 235, 0.08);
 }
 
-/* Bảng 2: section-head sticky với glassmorphism */
 .scrollable-panel {
   padding-top: 0;
   overflow-x: hidden;
@@ -546,19 +502,6 @@ body.light-mode .fade-panel.is-visible .panel-card {
 
 body.light-mode .scrollable-panel > .section-head {
   background: rgba(248, 250, 252, 0.97);
-}
-
-.panel-card::before {
-  content: "";
-  position: absolute;
-  inset: auto -12% 58% 48%;
-  height: 220px;
-  background: radial-gradient(circle, rgba(14, 165, 233, 0.18), transparent 70%);
-  pointer-events: none;
-}
-
-body.light-mode .panel-card::before {
-  background: radial-gradient(circle, rgba(37, 99, 235, 0.07), transparent 70%);
 }
 
 .hero-card {
@@ -730,17 +673,27 @@ body.light-mode .panel-card::before {
 
 .reveal-item {
   opacity: 0;
-  transform: translateY(22px) scale(0.97);
+  transform: translateY(26px) scale(0.96);
   filter: blur(8px);
 }
 
 .fade-panel.is-visible .reveal-item {
-  animation: reveal-up 0.65s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation: reveal-up 0.75s cubic-bezier(0.22, 1.4, 0.36, 1) forwards;
   animation-delay: calc(var(--reveal-order, 0) * 70ms);
 }
 
 @keyframes reveal-up {
-  to {
+  0% {
+    opacity: 0;
+    transform: translateY(26px) scale(0.9);
+    filter: blur(8px);
+  }
+  70% {
+    opacity: 1;
+    transform: translateY(-4px) scale(1.02);
+    filter: blur(0);
+  }
+  100% {
     opacity: 1;
     transform: translateY(0) scale(1);
     filter: blur(0);
@@ -884,7 +837,6 @@ body.light-mode .panel-card::before {
 .social-link-card:hover,
 .meta-chip:hover {
   border-color: rgba(0, 240, 255, 0.42);
-  box-shadow: 0 18px 44px rgba(14, 165, 233, 0.18);
 }
 
 .project-topline,
@@ -940,7 +892,7 @@ body.light-mode .panel-card::before {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  padding: 5px 0; /* Thêm vùng đệm để dễ click hơn */
+  padding: 5px 0;
   color: var(--accent);
   font-weight: 700;
   font-size: 0.95rem;
@@ -948,7 +900,7 @@ body.light-mode .panel-card::before {
   width: fit-content;
   position: relative;
   z-index: 10;
-  pointer-events: auto; /* Đảm bảo nhận sự kiện click */
+  pointer-events: auto;
 }
 
 .project-link:hover {
@@ -1023,7 +975,6 @@ body.light-mode .panel-card::before {
 .social-card {
   display: flex;
   flex-direction: column;
-  /* ─── Dark: Black & Deep Blue ─── */
   background:
     radial-gradient(ellipse at 20% 10%, rgba(14, 165, 233, 0.22) 0%, transparent 48%),
     radial-gradient(ellipse at 80% 90%, rgba(37, 99, 235, 0.2) 0%, transparent 48%),
@@ -1034,7 +985,6 @@ body.light-mode .panel-card::before {
     inset 0 1px 0 rgba(0, 240, 255, 0.1);
 }
 
-/* Hiệu ứng ánh sáng sinh học đại dương */
 .social-card::before {
   inset: auto -8% 60% 42%;
   height: 280px;
@@ -1057,7 +1007,6 @@ body.light-mode .panel-card::before {
   100% { opacity: 1;    transform: scale(1.18); }
 }
 
-/* Section-head ocean */
 .social-card .section-head .section-index {
   color: rgba(56, 189, 248, 0.8);
 }
@@ -1097,7 +1046,6 @@ body.light-mode .panel-card::before {
 .social-link-card:hover {
   background: rgba(14, 165, 233, 0.15);
   border-color: rgba(0, 240, 255, 0.5);
-  box-shadow: 0 8px 32px rgba(14, 165, 233, 0.28), 0 0 0 1px rgba(0, 240, 255, 0.12);
 }
 
 .social-link-card i {
@@ -1134,7 +1082,6 @@ body.light-mode .panel-card::before {
   box-shadow: 0 12px 32px rgba(14, 165, 233, 0.4), 0 0 20px rgba(0, 240, 255, 0.1);
 }
 
-/* ── Light: Royal Blue social overrides ── */
 body.light-mode .social-card {
   background:
     radial-gradient(ellipse at 18% 0%, rgba(37, 99, 235, 0.06) 0%, transparent 55%),
@@ -1311,11 +1258,7 @@ body.light-mode .progress-dot.active {
 
 .tilt-card {
   transform-style: preserve-3d;
-  transition: transform 0.18s ease, box-shadow 0.25s ease;
-}
-
-.tilt-card:hover {
-  box-shadow: 0 24px 50px rgba(0, 0, 0, 0.22);
+  transition: transform 0.18s ease;
 }
 
 @media (max-width: 1200px) {
@@ -1393,6 +1336,7 @@ body.light-mode .progress-dot.active {
     opacity: 1;
     transform: none;
     filter: none;
+    clip-path: none;
   }
 
   .avatar-frame {

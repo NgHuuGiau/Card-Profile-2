@@ -45,14 +45,14 @@ document.addEventListener("DOMContentLoaded", () => {
       statFocusLabel: "Tập trung vào trải nghiệm và thuật toán",
       projectsTitle: "Dự án tiêu biểu",
       projectsSubtitle: "Những thử nghiệm và sản phẩm thực tế, nơi tôi áp dụng kiến thức để giải quyết các bài toán cụ thể.",
-      project1Title: "Sudoku Game",
-      project1Desc: "Trải nghiệm giải đố mượt mà được xây dựng trên thuật toán quay lui (Backtracking), mang lại những thử thách trí tuệ vô tận.",
-      project2Title: "SummarEase Django",
-      project2Desc: "Giải pháp thông minh giúp 'gạn đục khơi trong', trích xuất những tinh túy từ các văn bản dài chỉ trong tích tắc.",
-      project3Title: "Fashion Website",
-      project3Desc: "Hệ thống thương mại điện tử hiện đại, chú trọng vào quy trình mua hàng mượt mà và quản lý dữ liệu chính xác.",
-      project4Title: "YOLO12 AI Vision System",
-      project4Desc: "Hệ thống thị giác máy tính tiên tiến, kết hợp nhận dạng đối tượng YOLO12 và phân tích cử chỉ tay thời gian thực, tối ưu hóa cho hiệu năng GPU.",
+      project1Title: "OncoVision",
+      project1Desc: "Nền tảng hỗ trợ chẩn đoán hình ảnh y khoa: phân tích 7 nhóm ung thư, chat AI cho bác sĩ và pipeline huấn luyện mô hình YOLO/CNN ngay trên máy local.",
+      project2Title: "Fashion Website",
+      project2Desc: "Hệ thống thương mại điện tử thời trang với Django + Vanilla JS, tích hợp CI/CD, Docker và chuẩn hoá chất lượng mã nguồn.",
+      project3Title: "SummarEase Django",
+      project3Desc: "Công cụ tóm tắt văn bản thông minh: trích xuất tinh tuý từ văn bản, URL và file (PDF/DOCX/EPUB) bằng TextRank và Gemini AI.",
+      project4Title: "YOLO Real-Time Vision",
+      project4Desc: "Hệ thống nhận diện vật thể và cử chỉ bàn tay theo thời gian thực với YOLO11 + MediaPipe, tăng tốc TensorRT và web UI trực tiếp.",
       viewSource: "Xem mã nguồn",
       contactTitle: "Thông tin liên hệ",
       contactSubtitle: "Bạn có một ý tưởng thú vị hay một dự án cần cộng tác? Đừng ngần ngại, tôi luôn sẵn lòng lắng nghe và kết nối.",
@@ -88,14 +88,14 @@ document.addEventListener("DOMContentLoaded", () => {
       statFocusLabel: "Focused on experience and algorithms",
       projectsTitle: "Featured projects",
       projectsSubtitle: "A showcase of real-world solutions and experiments where logic meets user experience.",
-      project1Title: "Sudoku Game",
-      project1Desc: "A smooth puzzle-solving experience powered by Backtracking algorithms, offering endless intellectual challenges.",
-      project2Title: "SummarEase Django",
-      project2Desc: "A smart solution to extract the essence from long-form text, saving time and improving information processing.",
-      project3Title: "Fashion Website",
-      project3Desc: "Modern e-commerce architecture focused on smooth user journeys and robust data management.",
-      project4Title: "YOLO12 AI Vision System",
-      project4Desc: "Advanced computer vision pipeline combining YOLO12 object detection with real-time hand gesture analysis, optimized for high-performance GPU inference.",
+      project1Title: "OncoVision",
+      project1Desc: "A medical imaging diagnostic platform analyzing 7 cancer groups, with an AI chat for doctors and a YOLO/CNN model training pipeline running fully on local machines.",
+      project2Title: "Fashion Website",
+      project2Desc: "A fashion e-commerce system built with Django + Vanilla JS, featuring CI/CD, Docker and strict code-quality standards.",
+      project3Title: "SummarEase Django",
+      project3Desc: "A smart text summarization tool extracting the essence from text, URLs and files (PDF/DOCX/EPUB) using TextRank and Gemini AI.",
+      project4Title: "YOLO Real-Time Vision",
+      project4Desc: "A real-time object and hand-gesture recognition system built on YOLO11 + MediaPipe, accelerated with TensorRT and a live web UI.",
       viewSource: "View source code",
       contactTitle: "Contact information",
       contactSubtitle: "Got an exciting idea or a project to collaborate on? Let's connect and build something great together.",
@@ -144,10 +144,6 @@ document.addEventListener("DOMContentLoaded", () => {
       document.documentElement.style.setProperty("--cursor-y", event.clientY + "px");
     });
   }
-
-  /* ══════════════════════════════════════
-     PRELOADER
-  ══════════════════════════════════════ */
   function runPreloader() {
     if (!preloader || !percentEl || !barEl) {
       document.body.classList.add("is-ready");
@@ -155,7 +151,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     let pct = 0;
-    // Fast at start, slow in middle, fast at end
     const speeds = [
       { target: 30, ms: 18 },
       { target: 70, ms: 28 },
@@ -175,7 +170,6 @@ document.addEventListener("DOMContentLoaded", () => {
         return;
       }
 
-      // Pick speed based on current percentage
       while (speedIdx < speeds.length - 1 && pct >= speeds[speedIdx].target) {
         speedIdx++;
       }
@@ -187,11 +181,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function dismissPreloader() {
     if (!preloader) return;
-    // Short pause at 100% before hiding
     setTimeout(() => {
       document.body.classList.add("is-ready");
       preloader.classList.add("hidden");
-      // Remove from DOM after transition
       preloader.addEventListener("transitionend", () => {
         preloader.remove();
       }, { once: true });
@@ -200,14 +192,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
   runPreloader();
 
-  /* ══════════════════════════════════════
-     PARTICLE COLOR SYNC
-  ══════════════════════════════════════ */
   function updateParticleColors(isLight) {
     const canvas = document.querySelector("#particles-js canvas");
     if (!canvas) return;
 
-    // Attempt to re-initialise particles.js with new colour config
     const config = isLight
       ? {
           color: "#2563eb",
@@ -231,14 +219,10 @@ document.addEventListener("DOMContentLoaded", () => {
         pJS.particles.opacity.value = config.opacity;
         pJS.fn.particlesRefresh();
       } catch (e) {
-        // Silently fail if particles.js API is unavailable
       }
     }
   }
 
-  /* ══════════════════════════════════════
-     SLIDE NAVIGATION
-  ══════════════════════════════════════ */
   function clampIndex(index) {
     return Math.max(0, Math.min(index, slides.length - 1));
   }
@@ -274,14 +258,12 @@ document.addEventListener("DOMContentLoaded", () => {
       return;
     }
 
-    // Kiểm tra nếu đang cuộn trên .scrollable-panel thì ưu tiên cuộn nội dung bên trong
     const scrollable = event.target.closest(".scrollable-panel");
     if (scrollable) {
       const direction = event.deltaY > 0 ? 1 : -1;
       const atTop = scrollable.scrollTop === 0;
       const atBottom = Math.abs(scrollable.scrollHeight - scrollable.clientHeight - scrollable.scrollTop) < 2;
 
-      // Nếu cuộn xuống mà chưa tới cuối, hoặc cuộn lên mà chưa tới đầu → cuộn nội dung card
       if ((direction === 1 && !atBottom) || (direction === -1 && !atTop)) {
         return;
       }
@@ -324,18 +306,12 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  /* ══════════════════════════════════════
-     THEME TOGGLE
-  ══════════════════════════════════════ */
   function applyThemeIcon() {
     themeToggle.innerHTML = document.body.classList.contains("light-mode")
       ? '<i class="fas fa-sun"></i>'
       : '<i class="fas fa-moon"></i>';
   }
 
-  /* ══════════════════════════════════════
-     I18N
-  ══════════════════════════════════════ */
   function updateLanguage(lang) {
     currentLang = lang;
     document.documentElement.lang = lang === "vi" ? "vi" : "en";
@@ -348,9 +324,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  /* ══════════════════════════════════════
-     3D TILT
-  ══════════════════════════════════════ */
   function setTilt(event, card) {
     if (mobileBreakpoint.matches) {
       return;
@@ -369,9 +342,6 @@ document.addEventListener("DOMContentLoaded", () => {
     card.style.transform = "";
   }
 
-  /* ══════════════════════════════════════
-     EVENT LISTENERS
-  ══════════════════════════════════════ */
   window.addEventListener("wheel", handleWheel, { passive: false });
   window.addEventListener("keydown", handleKeydown);
 
