@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -42,11 +42,16 @@
         <span class="brand-name" data-i18n="brandName">Nguyễn Hữu Giàu</span>
       </div>
 
+      <div class="status-badge" title="Live status">
+        <span class="status-dot"></span>
+        <span class="status-text" data-i18n="statusOpen">Sẵn sàng cho dự án mới</span>
+      </div>
+
       <div class="hud-actions">
-        <button id="theme-toggle" class="function-btn" aria-label="Đổi giao diện">
+        <button id="theme-toggle" class="function-btn magnetic-btn" aria-label="Đổi giao diện">
           <i class="fas fa-moon"></i>
         </button>
-        <button id="lang-toggle" class="function-btn" aria-label="Đổi ngôn ngữ">
+        <button id="lang-toggle" class="function-btn magnetic-btn" aria-label="Đổi ngôn ngữ">
           <i class="fas fa-language"></i>
         </button>
       </div>
@@ -76,20 +81,26 @@
 
     <main class="slides-stage">
       <section class="panel fade-panel is-visible" data-panel="intro">
-        <article class="panel-card hero-card">
+        <article class="panel-card hero-card spotlight-card">
+          <span class="section-index hero-index">01</span>
           <div class="panel-copy">
             <span class="eyebrow" data-i18n="heroEyebrow">Ngành Công nghệ thông tin - Chuyên ngành Kỹ sư phần mềm</span>
             <h1 class="hero-name" data-i18n="name">Nguyễn Hữu Giàu</h1>
+            <div class="hero-role-wrapper">
+              <span class="role-prefix" data-i18n="rolePrefix">Tôi là </span>
+              <span id="typewriter" class="typewriter-text"></span>
+              <span class="typewriter-cursor"></span>
+            </div>
             <p class="hero-summary" data-i18n="heroSummary">
               Tôi là một người yêu thích việc biến những ý tưởng phức tạp thành các sản phẩm kỹ thuật số mượt mà. Với tư duy của một kỹ sư và tâm hồn của một người làm sản phẩm, tôi tập trung vào việc tối ưu hóa hiệu suất và trải nghiệm người dùng.
             </p>
 
             <div class="hero-meta">
-              <div class="meta-chip">
+              <div class="meta-chip spotlight-card">
                 <span class="meta-label" data-i18n="majorLabel">Chuyên ngành</span>
                 <strong data-i18n="majorValue">Kỹ sư phần mềm</strong>
               </div>
-              <div class="meta-chip">
+              <div class="meta-chip spotlight-card">
                 <span class="meta-label" data-i18n="schoolLabel">Học tại</span>
                 <strong data-i18n="schoolValue">Đại học Nguyễn Tất Thành</strong>
               </div>
@@ -98,14 +109,13 @@
           </div>
 
           <div class="panel-visual">
-            <div class="avatar-frame tilt-card">
+            <div class="avatar-frame tilt-card spotlight-card">
               <div class="avatar-glow"></div>
               <img src="Video-Picture/Picture.png" alt="Ảnh đại diện Nguyễn Hữu Giàu" class="profile-img" />
             </div>
 
             <div class="skill-block">
               <div class="section-head compact">
-                <span class="section-index">01</span>
                 <h2 data-i18n="skillsTitle">Kỹ năng nổi bật</h2>
               </div>
               <div class="skills-marquee-container">
@@ -134,8 +144,8 @@
       </section>
 
       <section class="panel fade-panel" data-panel="projects">
-        <article class="panel-card scrollable-panel">
-          <div class="section-head">
+        <article class="panel-card scrollable-panel spotlight-card">
+          <div class="section-head sticky-head">
             <span class="section-index">02</span>
             <div>
               <h2 data-i18n="projectsTitle">Dự án tiêu biểu</h2>
@@ -143,10 +153,17 @@
             </div>
           </div>
 
+          <div class="project-filters" role="tablist" aria-label="Lọc dự án">
+            <button class="filter-btn active magnetic-btn" data-filter="all" data-i18n="filterAll">Tất cả (4)</button>
+            <button class="filter-btn magnetic-btn" data-filter="ai" data-i18n="filterAI">AI / Vision (2)</button>
+            <button class="filter-btn magnetic-btn" data-filter="fullstack" data-i18n="filterFullstack">Fullstack (1)</button>
+            <button class="filter-btn magnetic-btn" data-filter="nlp" data-i18n="filterNLP">NLP / AI Tools (1)</button>
+          </div>
+
           <div class="project-grid">
-            <article class="project-item tilt-card">
+            <article class="project-item tilt-card spotlight-card" data-category="ai">
               <div class="project-topline">
-                <span class="project-badge">AI / Medical</span>
+                <span class="project-badge"><i class="fas fa-dna"></i> AI / Medical</span>
                 <span class="project-year">2026</span>
               </div>
               <h3 class="project-title" data-i18n="project1Title">OncoVision</h3>
@@ -154,19 +171,19 @@
                 Nền tảng hỗ trợ chẩn đoán hình ảnh y khoa: phân tích 7 nhóm ung thư, chat AI cho bác sĩ và pipeline huấn luyện mô hình YOLO/CNN ngay trên máy local.
               </p>
               <div class="project-tags">
-                <span>PyTorch</span>
-                <span>YOLO / CNN</span>
-                <span>FastAPI</span>
+                <span><i class="devicon-pytorch-original colored"></i> PyTorch</span>
+                <span><i class="fas fa-brain"></i> YOLO / CNN</span>
+                <span><i class="devicon-fastapi-plain colored"></i> FastAPI</span>
               </div>
-              <a href="https://github.com/NgHuuGiau/OncoVision" target="_blank" class="project-link" rel="noreferrer">
+              <a href="https://github.com/NgHuuGiau/OncoVision" target="_blank" class="project-link magnetic-btn" rel="noreferrer">
                 <i class="fab fa-github"></i>
                 <span data-i18n="viewSource">Xem mã nguồn</span>
               </a>
             </article>
 
-            <article class="project-item tilt-card">
+            <article class="project-item tilt-card spotlight-card" data-category="fullstack">
               <div class="project-topline">
-                <span class="project-badge">Fullstack</span>
+                <span class="project-badge"><i class="fas fa-layer-group"></i> Fullstack</span>
                 <span class="project-year">2026</span>
               </div>
               <h3 class="project-title" data-i18n="project2Title">Fashion Website</h3>
@@ -174,19 +191,19 @@
                 Hệ thống thương mại điện tử thời trang với Django + Vanilla JS, tích hợp CI/CD, Docker và chuẩn hoá chất lượng mã nguồn.
               </p>
               <div class="project-tags">
-                <span>Django</span>
-                <span>SQLite</span>
-                <span>Docker</span>
+                <span><i class="devicon-django-plain colored"></i> Django</span>
+                <span><i class="devicon-sqlite-plain colored"></i> SQLite</span>
+                <span><i class="devicon-docker-plain colored"></i> Docker</span>
               </div>
-              <a href="https://github.com/NgHuuGiau/Fashion-Website" target="_blank" class="project-link" rel="noreferrer">
+              <a href="https://github.com/NgHuuGiau/Fashion-Website" target="_blank" class="project-link magnetic-btn" rel="noreferrer">
                 <i class="fab fa-github"></i>
                 <span data-i18n="viewSource">Xem mã nguồn</span>
               </a>
             </article>
 
-            <article class="project-item tilt-card">
+            <article class="project-item tilt-card spotlight-card" data-category="nlp">
               <div class="project-topline">
-                <span class="project-badge">Django / AI</span>
+                <span class="project-badge"><i class="fas fa-robot"></i> Django / AI</span>
                 <span class="project-year">2026</span>
               </div>
               <h3 class="project-title" data-i18n="project3Title">SummarEase Django</h3>
@@ -194,19 +211,19 @@
                 Công cụ tóm tắt văn bản thông minh: trích xuất tinh tuý từ văn bản, URL và file (PDF/DOCX/EPUB) bằng TextRank và Gemini AI.
               </p>
               <div class="project-tags">
-                <span>Django 5.2</span>
-                <span>TextRank</span>
-                <span>Gemini AI</span>
+                <span><i class="devicon-django-plain colored"></i> Django 5.2</span>
+                <span><i class="fas fa-file-alt"></i> TextRank</span>
+                <span><i class="fas fa-wand-magic-sparkles"></i> Gemini AI</span>
               </div>
-              <a href="https://github.com/NgHuuGiau/SummarEase-Django" target="_blank" class="project-link" rel="noreferrer">
+              <a href="https://github.com/NgHuuGiau/SummarEase-Django" target="_blank" class="project-link magnetic-btn" rel="noreferrer">
                 <i class="fab fa-github"></i>
                 <span data-i18n="viewSource">Xem mã nguồn</span>
               </a>
             </article>
 
-            <article class="project-item tilt-card">
+            <article class="project-item tilt-card spotlight-card" data-category="ai">
               <div class="project-topline">
-                <span class="project-badge">AI / Vision</span>
+                <span class="project-badge"><i class="fas fa-eye"></i> AI / Vision</span>
                 <span class="project-year">2026</span>
               </div>
               <h3 class="project-title" data-i18n="project4Title">YOLO Real-Time Vision</h3>
@@ -214,11 +231,11 @@
                 Hệ thống nhận diện vật thể và cử chỉ bàn tay theo thời gian thực với YOLO11 + MediaPipe, tăng tốc TensorRT và web UI trực tiếp.
               </p>
               <div class="project-tags">
-                <span>YOLO11</span>
-                <span>MediaPipe</span>
-                <span>TensorRT</span>
+                <span><i class="fas fa-video"></i> YOLO11</span>
+                <span><i class="fas fa-hand-paper"></i> MediaPipe</span>
+                <span><i class="fas fa-bolt"></i> TensorRT</span>
               </div>
-              <a href="https://github.com/NgHuuGiau/Yolo11" target="_blank" class="project-link" rel="noreferrer">
+              <a href="https://github.com/NgHuuGiau/Yolo11" target="_blank" class="project-link magnetic-btn" rel="noreferrer">
                 <i class="fab fa-github"></i>
                 <span data-i18n="viewSource">Xem mã nguồn</span>
               </a>
@@ -228,7 +245,7 @@
       </section>
 
       <section class="panel fade-panel" data-panel="contact">
-        <article class="panel-card">
+        <article class="panel-card spotlight-card">
           <div class="section-head">
             <span class="section-index">03</span>
             <div>
@@ -238,21 +255,23 @@
           </div>
 
           <div class="contact-grid">
-            <div class="contact-card tilt-card">
+            <div class="contact-card tilt-card spotlight-card copyable-card" data-copy="HuuGiau2304@gmail.com" title="Nhấn để sao chép Email">
               <span class="contact-icon"><i class="far fa-envelope"></i></span>
               <div class="contact-details">
                 <span class="contact-label" data-i18n="emailLabel">Email</span>
-                <a href="mailto:HuuGiau2304@gmail.com" class="contact-link">HuuGiau2304@gmail.com</a>
+                <span class="contact-link">HuuGiau2304@gmail.com</span>
               </div>
+              <span class="copy-hint" title="Sao chép"><i class="far fa-clone"></i></span>
             </div>
-            <div class="contact-card tilt-card">
+            <div class="contact-card tilt-card spotlight-card copyable-card" data-copy="+84932047365" title="Nhấn để sao chép Số điện thoại">
               <span class="contact-icon"><i class="fas fa-phone-alt"></i></span>
               <div class="contact-details">
                 <span class="contact-label" data-i18n="phoneLabel">Điện thoại</span>
                 <span class="contact-text">+84 932 047 365</span>
               </div>
+              <span class="copy-hint" title="Sao chép"><i class="far fa-clone"></i></span>
             </div>
-            <div class="contact-card tilt-card">
+            <div class="contact-card tilt-card spotlight-card">
               <span class="contact-icon"><i class="fas fa-map-marker-alt"></i></span>
               <div class="contact-details">
                 <span class="contact-label" data-i18n="addressLabel">Địa chỉ</span>
@@ -261,7 +280,7 @@
             </div>
           </div>
 
-          <a href="https://github.com/NgHuuGiau" class="cta-button" rel="noreferrer">
+          <a href="https://github.com/NgHuuGiau" class="cta-button magnetic-btn" rel="noreferrer">
             <i class="fas fa-rocket"></i>
             <span data-i18n="ctaText">Xem dự án mới nhất</span>
           </a>
@@ -269,7 +288,7 @@
       </section>
 
       <section class="panel fade-panel" data-panel="social">
-        <article class="panel-card social-card">
+        <article class="panel-card social-card spotlight-card">
           <div class="section-head">
             <span class="section-index">04</span>
             <div>
@@ -279,29 +298,29 @@
           </div>
 
           <div class="social-grid">
-            <a href="https://www.facebook.com/HuuGiau.2304" class="social-link-card tilt-card facebook" rel="noreferrer">
+            <a href="https://www.facebook.com/HuuGiau.2304" class="social-link-card tilt-card spotlight-card facebook" rel="noreferrer">
               <i class="fab fa-facebook-f"></i>
               <span>Facebook</span>
             </a>
-            <a href="https://x.com/Nguyen_Huu_Giau" class="social-link-card tilt-card twitter" rel="noreferrer">
+            <a href="https://x.com/Nguyen_Huu_Giau" class="social-link-card tilt-card spotlight-card twitter" rel="noreferrer">
               <i class="fab fa-twitter"></i>
               <span>X / Twitter</span>
             </a>
-            <a href="https://www.instagram.com/nguyen_huugiau/" class="social-link-card tilt-card instagram" rel="noreferrer">
+            <a href="https://www.instagram.com/nguyen_huugiau/" class="social-link-card tilt-card spotlight-card instagram" rel="noreferrer">
               <i class="fab fa-instagram"></i>
               <span>Instagram</span>
             </a>
-            <a href="https://github.com/NgHuuGiau" class="social-link-card tilt-card github" rel="noreferrer">
+            <a href="https://github.com/NgHuuGiau" class="social-link-card tilt-card spotlight-card github" rel="noreferrer">
               <i class="fab fa-github"></i>
               <span>GitHub</span>
             </a>
-            <a href="https://telegram.com" class="social-link-card tilt-card telegram" rel="noreferrer">
+            <a href="https://telegram.com" class="social-link-card tilt-card spotlight-card telegram" rel="noreferrer">
               <i class="fab fa-telegram-plane"></i>
               <span>Telegram</span>
             </a>
           </div>
 
-          <button id="backToFirstPage" class="back-to-top-btn" title="Về đầu trang">
+          <button id="backToFirstPage" class="back-to-top-btn magnetic-btn" title="Về đầu trang">
             <i class="fas fa-arrow-up"></i>
             <span data-i18n="backTopText">Quay lại giới thiệu</span>
           </button>
@@ -310,8 +329,35 @@
     </main>
 
     <div class="scroll-hint">
-      <span data-i18n="scrollHint">Cuộn hoặc dùng phím mũi tên để xem tiếp</span>
+      <span class="key-badge">1 - 4</span>
+      <span data-i18n="scrollHint">Cuộn hoặc phím 1-4 để đổi trang</span>
     </div>
+
+    <!-- Mobile Bottom Floating Navigation Dock -->
+    <nav class="mobile-dock" aria-label="Điều hướng nhanh">
+      <button class="dock-btn active" data-slide-target="0" aria-label="Giới thiệu">
+        <i class="fas fa-user"></i>
+        <span data-i18n="navIntro">Giới thiệu</span>
+      </button>
+      <button class="dock-btn" data-slide-target="1" aria-label="Dự án">
+        <i class="fas fa-code"></i>
+        <span data-i18n="navProjects">Dự án</span>
+      </button>
+      <button class="dock-btn" data-slide-target="2" aria-label="Liên hệ">
+        <i class="fas fa-envelope"></i>
+        <span data-i18n="navContact">Liên hệ</span>
+      </button>
+      <button class="dock-btn" data-slide-target="3" aria-label="Mạng xã hội">
+        <i class="fas fa-share-alt"></i>
+        <span data-i18n="navSocial">Kết nối</span>
+      </button>
+    </nav>
+  </div>
+
+  <!-- Toast Notification -->
+  <div id="toast" class="toast" role="status" aria-live="polite">
+    <i class="fas fa-check-circle toast-icon"></i>
+    <span id="toast-message" class="toast-text">Đã sao chép!</span>
   </div>
 
   <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
